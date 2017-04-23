@@ -1,0 +1,66 @@
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Ultratimer.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Ultratimer.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\SQLite-net.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\SQLitePCL.batteries.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\SQLitePCL.raw.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Core.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Mono.Android.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\SQLite-net.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Core.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.App.xaml.g.cs
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.Page1.xaml.g.cs
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.InitialPage.xaml.g.cs
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.SecondWayPage.xaml.g.cs
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.Page2.xaml.g.cs
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.FirstWayPage.xaml.g.cs
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.ThirdWayPage.xaml.g.cs
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Plugin.Settings.Abstractions.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Plugin.Settings.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Plugin.Settings.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Plugin.Settings.Abstractions.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Poz1.NFCForms.Abstract.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.csprojResolveAssemblyReference.cache
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Ultratimer.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.csprojResolveAssemblyReference.cache
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.App.xaml.g.cs
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.Page1.xaml.g.cs
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Mono.Android.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\NdefLibrary.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Plugin.Settings.Abstractions.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Plugin.Settings.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Poz1.NFCForms.Abstract.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\SQLite-net.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\SQLitePCL.batteries.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\SQLitePCL.raw.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Mono.Android.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Plugin.Settings.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Plugin.Settings.Abstractions.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Poz1.NFCForms.Abstract.pdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\SQLite-net.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Ultratimer.dll
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Ultratimer.pdb
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.dll
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.pdb
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\obj\Debug\Ultratimer.dll.mdb
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer\bin\Debug\Ultratimer.dll.mdb

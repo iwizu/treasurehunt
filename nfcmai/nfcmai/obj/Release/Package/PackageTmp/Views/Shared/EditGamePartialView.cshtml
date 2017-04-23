@@ -1,0 +1,119 @@
+﻿@model nfcmai.Models.UGames
+
+<table>
+    <tr>
+        <td></td>
+        <td>Treasure Hunt Title</td>
+        <td>
+            <input type="text" id="EGName"  value="@Model.Name" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Started</td>
+        <td>
+            <input type="text" id="EGStarted"  value="@if (Model.Started.HasValue) { @String.Format("{0}/{1}/{2}", Model.Started.Value.Day, Model.Started.Value.Month, Model.Started.Value.Year) } else {  } " />
+</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>Winner</td>
+
+<td>
+
+<input type="text" id="EGWinner" readonly="readonly"  value="@Model.Winner" />
+    <a href="javascript:ClearWinner()" class="btn btn-danger btn-xs">Clear</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>Finished</td>
+
+<td>
+
+<input type="checkbox" id="EGFinished" checked="@Model.Finished" />
+
+</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>
+
+<input type="button" value="Καταχώρηση" id="submit-button" onclick="clickedEG()" class="btnStyleOne" />
+            <input id="idEG" type="hidden" name="hf" value="">
+
+        </td>
+    </tr>
+</table>
+<script>
+    function ClearWinner()
+    {
+        $('#EGWinner').val('');
+    }
+    function clickedEG()
+            {
+                //Set inserted vlaues
+                var Name = $("#EGName").val();
+                var Finished = $("#EGFinished").val();
+                var Winner = $("#EGWinner").val();
+                var Started = $("#EGStarted").datepicker("getDate");
+                var dt = (Started.getMonth() + 1) + '/' + Started.getDate() + '/' + Started.getFullYear();
+                var Id = $("#idEG").val();
+
+        // Call Create action method
+                $.post('/Home/EditGame', { "Id": Id, "Name": Name, "Finished": Finished, "Winner": Winner, "Started": dt },
+            function () {
+                $("#editGameForm").dialog("close");
+                });
+
+                tinymce.init({
+                    selector: '.mcetiny',
+            theme: "modern",
+            language: 'el',
+            width: 800,
+            height: 400,
+            theme: "modern",
+            plugins: [
+                "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media nonbreaking save table contextmenu directionality",
+                "emoticons template paste textcolor responsivefilemanager"
+            ],
+            toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            toolbar2: "responsivefilemanager | print preview media | forecolor backcolor emoticons",
+            relative_urls: false,
+            external_filemanager_path: "/filemanager/",
+            filemanager_title: "Responsive Filemanager",
+            external_plugins: { "filemanager": "/filemanager/plugin.min.js" },
+            image_advtab: true,
+            templates: [
+                            { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ]
+        });
+            }
+    $('.iframe-btn').fancybox({
+                'width': 900,
+        'height': 600,
+        'type': 'iframe',
+        'autoScale': false
+    });
+    $("#EGStarted").datepicker({ dateFormat: "dd/mm/yy" });
+
+</script>
+
+
+

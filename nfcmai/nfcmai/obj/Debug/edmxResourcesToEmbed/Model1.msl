@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KeptorDBModelStoreContainer" CdmEntityContainer="KeptorDBEntities">
+    <EntitySetMapping Name="TreasureHuntGames">
+      <EntityTypeMapping TypeName="KeptorDBModel.TreasureHuntGames">
+        <MappingFragment StoreEntitySet="TreasureHuntGames">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+          <ScalarProperty Name="Finished" ColumnName="Finished" />
+          <ScalarProperty Name="Winner" ColumnName="Winner" />
+          <ScalarProperty Name="Started" ColumnName="Started" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreasureHuntParticipants">
+      <EntityTypeMapping TypeName="KeptorDBModel.TreasureHuntParticipants">
+        <MappingFragment StoreEntitySet="TreasureHuntParticipants">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TreasureHuntId" ColumnName="TreasureHuntId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreasureHuntTips">
+      <EntityTypeMapping TypeName="KeptorDBModel.TreasureHuntTips">
+        <MappingFragment StoreEntitySet="TreasureHuntTips">
+          <ScalarProperty Name="IsFirst" ColumnName="IsFirst" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TreasureHuntGamesId" ColumnName="TreasureHuntGamesId" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Titlos" ColumnName="Titlos" />
+          <ScalarProperty Name="Keimeno" ColumnName="Keimeno" />
+          <ScalarProperty Name="IsFinal" ColumnName="IsFinal" />
+          <ScalarProperty Name="TakenBy" ColumnName="TakenBy" />
+          <ScalarProperty Name="HFCode" ColumnName="HFCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

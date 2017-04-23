@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="KeptorDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TreasureHuntGames">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="UniqueId" Type="uniqueidentifier" />
+          <Property Name="Finished" Type="bit" />
+          <Property Name="Winner" Type="int" />
+          <Property Name="Started" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TreasureHuntParticipants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="TreasureHuntId" Type="int" />
+        </EntityType>
+        <EntityType Name="TreasureHuntTips">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TreasureHuntGamesId" Type="int" />
+          <Property Name="Picture" Type="nvarchar" MaxLength="150" />
+          <Property Name="Titlos" Type="nvarchar" MaxLength="150" />
+          <Property Name="Keimeno" Type="nvarchar" MaxLength="800" />
+          <Property Name="IsFinal" Type="bit" />
+          <Property Name="TakenBy" Type="int" />
+          <Property Name="HFCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsFirst" Type="bit" />
+        </EntityType>
+        <Association Name="FK_TreasureHuntGames_ToParticipants">
+          <End Role="TreasureHuntParticipants" Type="Self.TreasureHuntParticipants" Multiplicity="0..1" />
+          <End Role="TreasureHuntGames" Type="Self.TreasureHuntGames" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreasureHuntParticipants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreasureHuntGames">
+              <PropertyRef Name="Winner" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreasureHuntGames_ToTreasureHuntParticipants">
+          <End Role="TreasureHuntGames" Type="Self.TreasureHuntGames" Multiplicity="0..1" />
+          <End Role="TreasureHuntParticipants" Type="Self.TreasureHuntParticipants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreasureHuntGames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreasureHuntParticipants">
+              <PropertyRef Name="TreasureHuntId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreasureHuntTips_ToTreasureHuntGames">
+          <End Role="TreasureHuntGames" Type="Self.TreasureHuntGames" Multiplicity="0..1" />
+          <End Role="TreasureHuntTips" Type="Self.TreasureHuntTips" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreasureHuntGames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreasureHuntTips">
+              <PropertyRef Name="TreasureHuntGamesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreasureHuntTips_ToTreasureHuntParticipants">
+          <End Role="TreasureHuntParticipants" Type="Self.TreasureHuntParticipants" Multiplicity="0..1" />
+          <End Role="TreasureHuntTips" Type="Self.TreasureHuntTips" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreasureHuntParticipants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreasureHuntTips">
+              <PropertyRef Name="TakenBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="KeptorDBModelStoreContainer">
+          <EntitySet Name="TreasureHuntGames" EntityType="Self.TreasureHuntGames" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TreasureHuntParticipants" EntityType="Self.TreasureHuntParticipants" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TreasureHuntTips" EntityType="Self.TreasureHuntTips" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TreasureHuntGames_ToParticipants" Association="Self.FK_TreasureHuntGames_ToParticipants">
+            <End Role="TreasureHuntParticipants" EntitySet="TreasureHuntParticipants" />
+            <End Role="TreasureHuntGames" EntitySet="TreasureHuntGames" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreasureHuntGames_ToTreasureHuntParticipants" Association="Self.FK_TreasureHuntGames_ToTreasureHuntParticipants">
+            <End Role="TreasureHuntGames" EntitySet="TreasureHuntGames" />
+            <End Role="TreasureHuntParticipants" EntitySet="TreasureHuntParticipants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreasureHuntTips_ToTreasureHuntGames" Association="Self.FK_TreasureHuntTips_ToTreasureHuntGames">
+            <End Role="TreasureHuntGames" EntitySet="TreasureHuntGames" />
+            <End Role="TreasureHuntTips" EntitySet="TreasureHuntTips" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreasureHuntTips_ToTreasureHuntParticipants" Association="Self.FK_TreasureHuntTips_ToTreasureHuntParticipants">
+            <End Role="TreasureHuntParticipants" EntitySet="TreasureHuntParticipants" />
+            <End Role="TreasureHuntTips" EntitySet="TreasureHuntTips" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KeptorDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TreasureHuntGames">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueId" Type="Guid" />
+          <Property Name="Finished" Type="Boolean" />
+          <Property Name="Winner" Type="Int32" />
+          <Property Name="Started" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="TreasureHuntParticipants" Relationship="Self.FK_TreasureHuntGames_ToTreasureHuntParticipants" FromRole="TreasureHuntGames" ToRole="TreasureHuntParticipants" />
+          <NavigationProperty Name="TreasureHuntTips" Relationship="Self.FK_TreasureHuntTips_ToTreasureHuntGames" FromRole="TreasureHuntGames" ToRole="TreasureHuntTips" />
+          <NavigationProperty Name="TreasureHuntParticipants1" Relationship="KeptorDBModel.FK_TreasureHuntGames_ToParticipants" FromRole="TreasureHuntGames" ToRole="TreasureHuntParticipants" />
+        </EntityType>
+        <EntityType Name="TreasureHuntParticipants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TreasureHuntId" Type="Int32" />
+          <NavigationProperty Name="TreasureHuntGames" Relationship="Self.FK_TreasureHuntGames_ToTreasureHuntParticipants" FromRole="TreasureHuntParticipants" ToRole="TreasureHuntGames" />
+          <NavigationProperty Name="TreasureHuntTips" Relationship="Self.FK_TreasureHuntTips_ToTreasureHuntParticipants" FromRole="TreasureHuntParticipants" ToRole="TreasureHuntTips" />
+          <NavigationProperty Name="TreasureHuntGames1" Relationship="KeptorDBModel.FK_TreasureHuntGames_ToParticipants" FromRole="TreasureHuntParticipants" ToRole="TreasureHuntGames" />
+        </EntityType>
+        <EntityType Name="TreasureHuntTips">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TreasureHuntGamesId" Type="Int32" />
+          <Property Name="Picture" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Titlos" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Keimeno" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+          <Property Name="IsFinal" Type="Boolean" />
+          <Property Name="TakenBy" Type="Int32" />
+          <Property Name="HFCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TreasureHuntGames" Relationship="Self.FK_TreasureHuntTips_ToTreasureHuntGames" FromRole="TreasureHuntTips" ToRole="TreasureHuntGames" />
+          <NavigationProperty Name="TreasureHuntParticipants" Relationship="Self.FK_TreasureHuntTips_ToTreasureHuntParticipants" FromRole="TreasureHuntTips" ToRole="TreasureHuntParticipants" />
+          <Property Name="IsFirst" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_TreasureHuntGames_ToTreasureHuntParticipants">
+          <End Role="TreasureHuntGames" Type="Self.TreasureHuntGames" Multiplicity="0..1" />
+          <End Role="TreasureHuntParticipants" Type="Self.TreasureHuntParticipants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreasureHuntGames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreasureHuntParticipants">
+              <PropertyRef Name="TreasureHuntId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreasureHuntTips_ToTreasureHuntGames">
+          <End Role="TreasureHuntGames" Type="Self.TreasureHuntGames" Multiplicity="0..1" />
+          <End Role="TreasureHuntTips" Type="Self.TreasureHuntTips" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreasureHuntGames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreasureHuntTips">
+              <PropertyRef Name="TreasureHuntGamesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TreasureHuntTips_ToTreasureHuntParticipants">
+          <End Role="TreasureHuntParticipants" Type="Self.TreasureHuntParticipants" Multiplicity="0..1" />
+          <End Role="TreasureHuntTips" Type="Self.TreasureHuntTips" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreasureHuntParticipants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreasureHuntTips">
+              <PropertyRef Name="TakenBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="KeptorDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TreasureHuntGames" EntityType="Self.TreasureHuntGames" />
+          <EntitySet Name="TreasureHuntParticipants" EntityType="Self.TreasureHuntParticipants" />
+          <EntitySet Name="TreasureHuntTips" EntityType="Self.TreasureHuntTips" />
+          <AssociationSet Name="FK_TreasureHuntGames_ToTreasureHuntParticipants" Association="Self.FK_TreasureHuntGames_ToTreasureHuntParticipants">
+            <End Role="TreasureHuntGames" EntitySet="TreasureHuntGames" />
+            <End Role="TreasureHuntParticipants" EntitySet="TreasureHuntParticipants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreasureHuntTips_ToTreasureHuntGames" Association="Self.FK_TreasureHuntTips_ToTreasureHuntGames">
+            <End Role="TreasureHuntGames" EntitySet="TreasureHuntGames" />
+            <End Role="TreasureHuntTips" EntitySet="TreasureHuntTips" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreasureHuntTips_ToTreasureHuntParticipants" Association="Self.FK_TreasureHuntTips_ToTreasureHuntParticipants">
+            <End Role="TreasureHuntParticipants" EntitySet="TreasureHuntParticipants" />
+            <End Role="TreasureHuntTips" EntitySet="TreasureHuntTips" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TreasureHuntGames_ToParticipants" Association="KeptorDBModel.FK_TreasureHuntGames_ToParticipants">
+            <End Role="TreasureHuntParticipants" EntitySet="TreasureHuntParticipants" />
+            <End Role="TreasureHuntGames" EntitySet="TreasureHuntGames" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK_TreasureHuntGames_ToParticipants">
+          <End Type="KeptorDBModel.TreasureHuntParticipants" Role="TreasureHuntParticipants" Multiplicity="0..1" />
+          <End Type="KeptorDBModel.TreasureHuntGames" Role="TreasureHuntGames" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TreasureHuntParticipants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreasureHuntGames">
+              <PropertyRef Name="Winner" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KeptorDBModelStoreContainer" CdmEntityContainer="KeptorDBEntities">
+          <EntitySetMapping Name="TreasureHuntGames">
+            <EntityTypeMapping TypeName="KeptorDBModel.TreasureHuntGames">
+              <MappingFragment StoreEntitySet="TreasureHuntGames">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+                <ScalarProperty Name="Finished" ColumnName="Finished" />
+                <ScalarProperty Name="Winner" ColumnName="Winner" />
+                <ScalarProperty Name="Started" ColumnName="Started" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreasureHuntParticipants">
+            <EntityTypeMapping TypeName="KeptorDBModel.TreasureHuntParticipants">
+              <MappingFragment StoreEntitySet="TreasureHuntParticipants">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TreasureHuntId" ColumnName="TreasureHuntId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreasureHuntTips">
+            <EntityTypeMapping TypeName="KeptorDBModel.TreasureHuntTips">
+              <MappingFragment StoreEntitySet="TreasureHuntTips">
+                <ScalarProperty Name="IsFirst" ColumnName="IsFirst" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TreasureHuntGamesId" ColumnName="TreasureHuntGamesId" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Titlos" ColumnName="Titlos" />
+                <ScalarProperty Name="Keimeno" ColumnName="Keimeno" />
+                <ScalarProperty Name="IsFinal" ColumnName="IsFinal" />
+                <ScalarProperty Name="TakenBy" ColumnName="TakenBy" />
+                <ScalarProperty Name="HFCode" ColumnName="HFCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

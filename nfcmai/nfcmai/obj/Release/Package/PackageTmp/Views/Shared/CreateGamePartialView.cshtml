@@ -1,0 +1,87 @@
+﻿@model nfcmai.Models.UGames
+
+<table>
+    <tr>
+        <td></td>
+        <td>Treasure Hunt Title</td>
+        <td>
+            <input type="text" id="CGName" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Started</td>
+        <td>
+            <input type="text"   id="CGStarted" />
+        </td>
+    </tr>   
+    <tr>
+        <td></td>
+        <td>Finished</td>
+        <td>
+            <input type="checkbox" id="CGFinished" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="button" value="Καταχώρηση" id="submit-button" onclick="clickedCG()" class="btnStyleOne" />
+            <input id="idCG" type="hidden" name="hf" value="">
+
+        </td>
+    </tr>
+</table>
+<script>
+    function clickedCG()
+    {
+        //Set inserted vlaues
+        var Name = $("#CGName").val();
+        var Finished = $("#CGFinished").val();
+        var Winner = '';
+        var Started = $("#CGStarted").datepicker("getDate");
+        var dt = (Started.getMonth() + 1) + '/' + Started.getDate() + '/' + Started.getFullYear();
+        console.log(dt);
+        // Call Create action method
+        $.post('/Home/CreateGame', { "Name": Name, "Finished": Finished, "Winner": Winner, "Started": dt },
+            function () {
+                $("#createGameForm").dialog("close");
+            });
+
+        tinymce.init({
+            selector: '.mcetiny',
+            theme: "modern",
+            language: 'el',
+            width: 800,
+            height: 400,
+            theme: "modern",
+            plugins: [
+                "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media nonbreaking save table contextmenu directionality",
+                "emoticons template paste textcolor responsivefilemanager"
+            ],
+            toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            toolbar2: "responsivefilemanager | print preview media | forecolor backcolor emoticons",
+            relative_urls: false,
+            external_filemanager_path: "/filemanager/",
+            filemanager_title: "Responsive Filemanager",
+            external_plugins: { "filemanager": "/filemanager/plugin.min.js" },
+            image_advtab: true,
+            templates: [
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ]
+        });
+    }
+    $('.iframe-btn').fancybox({
+        'width': 900,
+        'height': 600,
+        'type': 'iframe',
+        'autoScale': false
+    });
+    $("#CGStarted").datepicker({ dateFormat: "dd/mm/yy" });
+
+</script>
+
+
+

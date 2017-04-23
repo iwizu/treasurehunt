@@ -1,0 +1,788 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+<link href="~/Content/jquery.fancybox.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+<script src="~/Scripts/tinymce/tinymce.min.js"></script>
+<link href="~/Content/DataTables/css/scroller.dataTables.min.css" rel="stylesheet" />
+<link href="~/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <style>
+        .modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+body.loading {
+    overflow: hidden;   
+}
+body.loading .modal {
+    display: block;
+}
+    </style>
+
+<script>
+    tinymce.init({
+        selector: '.mcetiny',
+        theme: "modern", 
+        language: 'el',
+        width: 800,
+        height: 400,
+        theme: "modern",
+        plugins: [
+            "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+            "searchreplace wordcount visualblocks visualchars code fullscreen",
+            "insertdatetime media nonbreaking save table contextmenu directionality",
+            "emoticons template paste textcolor responsivefilemanager"
+        ],
+        toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+        toolbar2: "responsivefilemanager | print preview media | forecolor backcolor emoticons",
+        relative_urls: false,
+        external_filemanager_path: "/filemanager/",
+        filemanager_title: "Responsive Filemanager",
+        external_plugins: { "filemanager": "/filemanager/plugin.min.js" },
+        image_advtab: true,
+        templates: [
+            { title: 'Test template 1', content: 'Test 1' },
+            { title: 'Test template 2', content: 'Test 2' }
+        ]
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('.iframe-btn').fancybox({
+            'width': 900,
+            'height': 600,
+            'type': 'iframe',
+            'autoScale': false
+        });
+    });
+</script>
+    }
+
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+        <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        Widget settings form goes here
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn blue">Save changes</button>
+                        <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+        <!-- BEGIN STYLE CUSTOMIZER -->
+        <!-- END STYLE CUSTOMIZER -->
+        <!-- BEGIN PAGE HEADER-->
+        <h3 class="page-title">
+            Treasure Hunt <small>Create a Treasure hunt game in your neighborhood using NFC tags and Android smartphones!</small>
+        </h3>      
+        <!-- END PAGE HEADER-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="note note-success note-bordered">
+                    <p>
+                       Create a Treasure Hunt game and then create its clues with your NFC tags in order to guide your players.
+                    </p>
+                </div>
+                <div class="row">                 
+                        <div class="col-lg-12">
+                                <p style="font-size:large;text-align:center" class="bg-info">
+                                   <i class="glyphicon glyphicon-screenshot"></i> Your Treasure Hunt Games
+                                </p>
+                            <table id="GamesDataTable" cellpadding="0" cellspacing="0"
+                                   class="display pretty cell-border hover stripe">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>UniqueId</th>
+                                        <th>Finished</th>
+                                        <th>Winner</th>
+                                        <th>WinnerStr</th>
+                                        <th>Started</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <input id="selGame" type="hidden" name="hf" value="" />
+                            <br />
+                            <span id="states-loading-progress" style="display: none;"><img src="http://www.powatag.com/template/resource/runtime/1275/g16/static/images/ajax-loader.gif" />Please Wait..</span>
+
+                            <div id="createGameForm"></div>
+                            <div id="editGameForm"></div>
+                            <div id="deleteGameForm"></div>
+                            <div class="col-md-12">
+                                <input type="button" id="createGameButton" value="Create a new Hunt" class="createGameButton btn btn-xs btn-success" onclick="" />
+                                <input type="button" id="editGameButton" value="Edit selected Hunt" class="editGameButton btn btn-xs btn-warning" onclick="" />
+                                <input type="submit" id="deleteGameButton" value="Delete selected Hunt" class="deleteGameButton btn btn-xs btn-danger" name="action:Delete" />
+                            </div>
+                        </div>
+                    <div class="col-lg-8" style="text-align: center;">
+                        <span style="font-size:100px;font-weight:bolder">&#x2193;</span>
+                        <p style="font-size:large;text-align:center" class="bg-info">
+                            <i class="glyphicon glyphicon-hand-right"></i> Selected Game Clues
+                        </p>
+                        <table id="TipsDataTable" cellpadding="0" cellspacing="0"
+                               class="display pretty cell-border hover stripe">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>TreasureHuntId</th>
+                                    <th>Picture</th>
+                                    <th>Titlos</th>
+                                    <th>Keimeno</th>
+                                    <th>IsFinal</th>
+                                    <th>TakenBy</th>
+                                    <th>TakenById</th>
+                                    <th>HFCode</th>
+                                    <th>IsFirst</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <input id="selTip" type="hidden" name="hf" value="" />
+                        <div id="editTipForm"></div>
+                        <br />
+
+                        <div id="createTipForm"></div>
+                        <div id="deleteTipForm"></div>
+                        <div class="col-lg-12">
+                            <input type="button" id="createTipButton" value="Create a new Tip" class="createTipButton btn btn-xs btn-success" onclick="" />
+                            <input type="button" id="editTipButton" value="Edit selected Tip" class="editTipButton btn btn-xs btn-warning" onclick="" />
+                            <input type="submit" id="deleteTipButton" value="Delete selected Tip" class="deleteTipButton btn btn-xs btn-danger" name="action:Delete" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4"  style="text-align: center;">
+                        <span style="font-size:100px;font-weight:bolder">&#x2193;</span>
+                        <p style="font-size:large;text-align:center" class="bg-info">
+                            <i class="glyphicon glyphicon-user"></i> Selected Game Participants
+                        </p>
+                        <table id="ParticipantsDataTable" cellpadding="0" cellspacing="0"
+                               class="display pretty cell-border hover stripe">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>TreasureHuntId</th>                                   
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <input id="selParticipant" type="hidden" name="hf" value="" />
+                        <br />
+
+                        <div id="deleteParticipantForm"></div>
+                        <div class="col-lg-12">
+                            <input type="submit" id="deleteParticipantButton" value="Delete selected Participant" class="deleteGameButton btn btn-xs btn-danger" name="action:Delete" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="modal"></div>
+
+@section scripts
+{
+    <script src="~/Scripts/customDates.js"></script>
+<script src="~/Scripts/moment.min.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+  <!--  <script src="~/assets/global/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.el.js"></script> -->
+<script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/DataTables/dataTables.scroller.min.js"></script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.9/api/fnReloadAjax.js"></script>
+<script src="~/Scripts/jquery.fancybox.js"></script>
+<script src="~/Content/jquery-ui.js"></script>
+
+    <script>
+        $body = $("body");
+
+        $(document).on({
+            ajaxStart: function () { $body.addClass("loading"); },
+            ajaxStop: function () { $body.removeClass("loading"); }
+        });
+        //Generic Functions
+        function dtConvFromJSON(data) {
+            if (data == null) return '1/1/1950';
+            var r = /\/Date\(([0-9]+)\)\//gi
+            var matches = data.match(r);
+            if (matches == null) return '1/1/1950';
+            var result = matches.toString().substring(6, 19);
+            var epochMilliseconds = result.replace(
+            /^\/Date\(([0-9]+)([+-][0-9]{4})?\)\/$/,
+            '$1');
+            var b = new Date(parseInt(epochMilliseconds));
+            var c = new Date(b.toString());
+            console.log(c);
+            var curr_date = c.getDate();
+            var curr_month = c.getMonth() + 1;
+            var curr_year = c.getFullYear();
+            var curr_h = c.getHours();
+            var curr_m = c.getMinutes();
+            var curr_s = c.getSeconds();
+            var curr_offset = c.getTimezoneOffset() / 60
+            var d = curr_date + '/' + curr_month.toString() + '/' + curr_year ;
+            return d;
+        }
+        // CRUD Games START
+        function refreshGames() {
+            $(document).ajaxStart();
+            console.log('in');
+            var oTable = $('#GamesDataTable').DataTable({
+                "serverSide": true,
+                "ajax": {
+                    "type": "POST",
+                    "url": '/Home/GamesDataHandler',
+                    "contentType": 'application/json; charset=utf-8',
+                    'data': function (data) {
+                        var selectedId = null;
+                        data.parentId = selectedId;
+                        return data = JSON.stringify(data);
+                    }
+                },
+                "jQueryUI": true,
+                "dom": 'frtiS',
+                "sScrollY": "500px",
+                "scrollX": false,
+                "scrollCollapse": true,
+                "scroller": {
+                    loadingIndicator: false
+                },
+                "processing": true,
+                "paging": true,
+                "deferRender": true,
+                "columns": [
+               { "data": "Id" },
+               { "data": "Name" },
+               { "data": "UniqueId" },
+               { "data": "Finished" },
+               { "data": "Winner" },
+               { "data": "WinnerStr" },
+               { "data": "Started" }
+                ],
+                "order": [0, "asc"],
+                "columnDefs": [
+            {
+                "targets": [0],
+                "visible": false,
+                "searchable": false
+            },
+        {
+            "targets": [2],
+            "visible": false,
+            "searchable": true
+        },
+        {
+            "targets": [4],
+            "visible": false,
+            "searchable": true
+        },
+         {
+             "targets": [5],
+             "title": "Winner",
+             "visible": true,
+             "searchable": true
+         },
+           {
+               "targets": [6],
+               "render": function (data, type, full) { return dtConvFromJSON(data); }
+           }
+                ]
+            });
+           
+            oTable.columns().every(function () {
+                var that = this;
+
+                $('input', this.footer()).on('keyup change', function () {
+                    that
+                        .search(this.value)
+                        .draw();
+                });
+            });
+            $(document).ajaxStop();
+        }
+        refreshGames();
+        $(".createGameButton").click(function () {
+            //var pid = $("#theEventTemplate").val();
+            $(document).ajaxStart();
+            $.ajax({
+                // Call CreatePartialView action method
+                url: "CreateGamePartialView",
+                type: 'Get',
+                success: function (data) {
+                    var theDialog = $("#createGameForm").dialog({ title: "Create a Treasure Hunt Game", width: "400" });                        
+                    theDialog.dialog("open");
+
+                    $("#createGameForm").empty().append(data);
+                    //$("#createGameForm").find('#idCETID').val(pid);
+
+                    $("#editGameForm").hide();
+                    $("#deleteGameForm").hide();
+
+                },
+                error: function () {
+                    alert("something seems wrong");
+                }
+            });
+            $(document).ajaxStop();
+        });
+        $('#createGameForm').bind('dialogclose', function (event) {
+            $(document).ajaxStart();
+            $('#GamesDataTable').dataTable().fnDraw();
+            $(document).ajaxStop();
+        });
+        $(".editGameButton").click(function () {
+            $(document).ajaxStart();
+            // Get the Id if selected training and assign in selectedId variable
+            if ($('#selGame').val() != null ) {
+                var selectedId = $('#selGame').val().toString();
+
+                $.ajax({
+                    // Call EditPartialView action method
+                    url: "EditGamePartialView",
+                    data: { id: selectedId },
+                    type: 'Get',
+                    success: function (msg) {
+                        var theDialog = $("#editGameForm").dialog({ title: "Edit a Treasure Hunt Game", width: "400" });
+                        theDialog.dialog("open");
+                        $("#editGameForm").empty().append(msg);
+                        $("#editGameForm").find('#idEG').val(selectedId);
+
+                        $("#createGameForm").hide();
+                        $("#deleteGameForm").hide();
+
+                    },
+                    error: function () {
+                        alert("something seems wrong");
+                    }
+                });
+            }
+            else
+                alert("Επιλέξτε πρώτα μια εγγραφή από τη λίστα!");
+            $(document).ajaxStop();
+        });
+        $('#editGameForm').bind('dialogclose', function (event) {
+            $('#GamesDataTable').dataTable().fnDraw();
+        });
+        $(".deleteGameButton").click(function () {
+            $(document).ajaxStart();
+            // Get the Id if selected training and assign in selectedId variable
+            if ($('#selGame').val() != null ) {
+                var selectedId = $('#selGame').val().toString();
+
+                $.ajax({
+                    // Call EditPartialView action method
+                    url: "DeleteGamePartialView",
+                    data: { id: selectedId },
+                    type: 'Get',
+                    success: function (msg) {
+                        var theDialog = $("#deleteGameForm").dialog({ title: "Delete selected Treasure Hunt game", width: "400" });
+                        theDialog.dialog("open");
+                        $("#deleteGameForm").empty().append(msg);
+                        $("#deleteGameForm").find('#idDG').val(selectedId);
+                        console.log("delete esteila:" + selectedId);
+
+                        $("#editGameForm").hide();
+                        $("#createGameForm").hide();
+                    },
+                    error: function () {
+                        alert("something seems wrong");
+                    }
+                });
+            }
+            else
+                alert("Επιλέξτε πρώτα μια εγγραφή από τη λίστα!");
+            $(document).ajaxStop();
+        });
+        $('#deleteGameForm').bind('dialogclose', function (event) {
+            $('#GamesDataTable').dataTable().fnDraw();
+        });
+        $('#GamesDataTable tfoot th').each(function () {
+            $(this).html('<input type="text" />');
+        });
+        $('#GamesDataTable tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                $('#GamesDataTable tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+                var data = $('#GamesDataTable').dataTable().fnGetData(this);
+                if (data != null) {
+                    console.log("#selGame" + data.Id);
+                    $('#selGame').val(data.Id);
+                    console.log("exec $('#GamesDataTable').dataTable().fnReloadAjax(); ");
+                    $('#TipsDataTable').dataTable().fnReloadAjax();
+                    $('#ParticipantsDataTable').dataTable().fnReloadAjax();
+                }
+            }
+          
+        });
+        //CRUD Games END
+
+        // CRUD Tip START
+        function refreshTips() {
+            $(document).ajaxStart();
+                var oTable = $('#TipsDataTable').DataTable({
+                    "serverSide": true,
+                    "ajax": {
+                        "type": "POST",
+                        "url": '/Home/TipsDataHandler',
+                        "contentType": 'application/json; charset=utf-8',
+                        'data': function (data) {
+                            var selectedId = $('#selGame').val();                           
+                            console.log("wwwww()=" + selectedId);
+                            data.parentId = selectedId;
+                            return data = JSON.stringify(data);
+                        }
+                    },
+                    "jQueryUI": true,
+                    "dom": 'frtiS',
+                    "sScrollY": "500px",
+                    "scrollX": true,
+                    "scrollCollapse": true,
+                    "scroller": {
+                        loadingIndicator: false
+                    },
+                    "processing": true,
+                    "paging": true,
+                    "deferRender": true,
+                    "columns": [
+                   { "data": "Id" },
+                   { "data": "TreasureHuntId" },
+                   { "data": "Picture" },
+                   { "data": "Titlos" },
+                   { "data": "Keimeno" },
+                   { "data": "IsFinal" },
+                   { "data": "TakenBy" },
+                   { "data": "TakenById" },
+                   { "data": "HFCode" },
+                   { "data": "IsFirst" }
+                    ],
+                    "order": [0, "asc"],
+                    "columnDefs": [
+                {
+                    "targets": [0],
+                    "visible": false,
+                    "searchable": false
+                },
+                {
+                    "targets": [1],
+                    "visible": false,
+                    "searchable": false
+                },
+                {
+                    "targets": [2],
+                    "visible": false,
+                    "searchable": false
+                },
+                {
+                    "targets": [3],
+                    "title": "Title",
+                    "visible": true,
+                    "searchable": false
+                },
+                {
+                    "targets": [4],
+                    "title": "Details",
+                    "visible": true,
+                    "searchable": false
+                },
+                {
+                    "targets": [7],
+                    "visible": false,
+                    "searchable": false
+                }
+                    ]
+                });
+                console.log('ok');
+
+                oTable.columns().every(function () {
+                    var that = this;
+
+                    $('input', this.footer()).on('keyup change', function () {
+                        that
+                            .search(this.value)
+                            .draw();
+                    });
+                });
+                $(document).ajaxStop();
+        }
+        refreshTips();
+        $(".createTipButton").click(function () {
+            $(document).ajaxStart();
+            var selectedGameId = $('#selGame').val().toString();
+            console.log("WX=" + selectedGameId);
+            $.ajax({
+                // Call CreatePartialView action method
+                url: "CreateTipPartialView",
+                type: 'Get',
+                success: function (data) {
+                    var theDialog = $("#createTipForm").dialog({ title: "Create a Treasure Hunt Clue", width: "800", height: "900" });
+                    theDialog.dialog("open");
+
+                    $("#createTipForm").empty().append(data);
+                    $("#createTipForm").find('#CTSelTreasureId').val(selectedGameId);
+
+                    $("#editTipForm").hide();
+                    $("#deleteTipForm").hide();
+
+                },
+                error: function () {
+                    alert("something seems wrong");
+                }
+            });
+            $(document).ajaxStop();
+        });
+        $('#createTipForm').bind('dialogclose', function (event) {
+            $(document).ajaxStart();
+            $('#TipsDataTable').dataTable().fnDraw();
+            $(document).ajaxStop();
+        });
+        $(".editTipButton").click(function () {
+            $(document).ajaxStart();
+            // Get the Id if selected training and assign in selectedId variable
+            if ($('#selTip').val() != null) {
+                var selectedId = $('#selTip').val().toString();
+                var selectedGameId = $('#selGame').val().toString();
+
+                $.ajax({
+                    // Call EditPartialView action method
+                    url: "EditTipPartialView",
+                    data: { id: selectedId },
+                    type: 'Get',
+                    success: function (msg) {
+                        var theDialog = $("#editTipForm").dialog({ title: "Edit a Treasure Hunt Clue", width: "500", height: "900" });
+                        theDialog.dialog("open");
+                        $("#editTipForm").empty().append(msg);
+                        $("#editTipForm").find('#idET').val(selectedId);
+                        $("#editTipForm").find('#ETSelTreasureId').val(selectedGameId);
+
+                        $("#createTipForm").hide();
+                        $("#deleteTipForm").hide();
+
+                    },
+                    error: function () {
+                        alert("something seems wrong");
+                    }
+                });
+            }
+            else
+                alert("Επιλέξτε πρώτα μια εγγραφή από τη λίστα!");
+            $(document).ajaxStop();
+        });
+        $('#editTipForm').bind('dialogclose', function (event) {
+            $(document).ajaxStart();
+            $('#TipsDataTable').dataTable().fnDraw();
+            $(document).ajaxStop();
+        });
+        $(".deleteTipButton").click(function () {
+            $(document).ajaxStart();
+            // Get the Id if selected training and assign in selectedId variable
+            if ($('#selTip').val() != null) {
+                var selectedId = $('#selTip').val().toString();
+
+                $.ajax({
+                    // Call EditPartialView action method
+                    url: "DeleteTipPartialView",
+                    data: { id: selectedId },
+                    type: 'Get',
+                    success: function (msg) {
+                        var theDialog = $("#deleteTipForm").dialog({ title: "Delete selected Treasure Hunt clue", width: "400" });
+                        theDialog.dialog("open");
+                        $("#deleteTipForm").empty().append(msg);
+                        $("#deleteTipForm").find('#idDT').val(selectedId);
+                        console.log("delete esteila:" + selectedId);
+
+                        $("#editTipForm").hide();
+                        $("#createTipForm").hide();
+                    },
+                    error: function () {
+                        alert("something seems wrong");
+                    }
+                });
+            }
+            else
+                alert("Επιλέξτε πρώτα μια εγγραφή από τη λίστα!");
+            $(document).ajaxStop();
+        });
+        $('#deleteTipForm').bind('dialogclose', function (event) {
+            $(document).ajaxStart();
+            $('#TipsDataTable').dataTable().fnDraw();
+            $(document).ajaxStop();
+        });
+        $('#TipsDataTable tfoot th').each(function () {
+            $(this).html('<input type="text" />');
+        });
+        $('#TipsDataTable tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                $('#TipsDataTable tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+                var data = $('#TipsDataTable').dataTable().fnGetData(this);
+                if (data != null) {
+                    console.log("#selTip" + data.Id);
+                    $('#selTip').val(data.Id);
+                    console.log("exec $('#TipsDataTable').dataTable().fnReloadAjax(); ");
+                    // $('#GamesDataTable').dataTable().fnReloadAjax();
+                }
+            }
+        });
+        //CRUD Tips END
+
+        // CRUD Participants START
+        function refreshParticipants() {
+            $(document).ajaxStart();
+                var oTable = $('#ParticipantsDataTable').DataTable({
+                    "serverSide": true,
+                    "ajax": {
+                        "type": "POST",
+                        "url": '/Home/ParticipantsDataHandler',
+                        "contentType": 'application/json; charset=utf-8',
+                        'data': function (data) {
+                            console.log("refreshParticipants()");
+                            var selectedId = $('#selGame').val();
+                            data.parentId = selectedId;
+                            return data = JSON.stringify(data);
+                        }
+                    },
+                    "jQueryUI": true,
+                    "dom": 'frtiS',
+                    "sScrollY": "500px",
+                    "scrollX": false,
+                    "scrollCollapse": true,
+                    "scroller": {
+                        loadingIndicator: false
+                    },
+                    "processing": true,
+                    "paging": true,
+                    "deferRender": true,
+                    "columns": [
+                   { "data": "Id" },
+                   { "data": "Name" },
+                   { "data": "TreasureHuntId" }
+                    ],
+                    "order": [0, "asc"],
+                    "columnDefs": [
+                {
+                    "targets": [0],
+                    "visible": false,
+                    "searchable": false
+                }, 
+                 {
+                     "targets": [2],
+                     "visible": false,
+                     "searchable": false
+                 }]
+                                    });
+                console.log('ok');
+
+                oTable.columns().every(function () {
+                    var that = this;
+
+                    $('input', this.footer()).on('keyup change', function () {
+                        that
+                            .search(this.value)
+                            .draw();
+                    });
+                });
+                $(document).ajaxStop();
+            }
+        
+        refreshParticipants();
+
+        $(".deleteParticipantButton").click(function () {
+            $(document).ajaxStart();
+            // Get the Id if selected training and assign in selectedId variable
+            if ($('#selParticipant').val() != null) {
+                var selectedId = $('#selParticipant').val().toString();
+
+                $.ajax({
+                    // Call EditPartialView action method
+                    url: "DeleteParticipantPartialView",
+                    data: { id: selectedId },
+                    type: 'Get',
+                    success: function (msg) {
+                        var theDialog = $("#deleteParticipantForm").dialog({ title: "Delete selected Participant", width: "400" });
+                        theDialog.dialog("open");
+                        $("#deleteParticipantForm").empty().append(msg);
+                        $("#deleteParticipantForm").find('#idDP').val(selectedId);
+                        console.log("delete esteila:" + selectedId);
+
+                        $("#editParticipantForm").hide();
+                        $("#createParticipantForm").hide();
+                    },
+                    error: function () {
+                        alert("something seems wrong");
+                    }
+                });
+            }
+            else
+                alert("Επιλέξτε πρώτα μια εγγραφή από τη λίστα!");
+            $(document).ajaxStop();
+        });
+        $('#deleteParticipantForm').bind('dialogclose', function (event) {
+            $(document).ajaxStart();
+            $('#ParticipantsDataTable').dataTable().fnDraw();
+            $(document).ajaxStop();
+        });
+        $('#ParticipantsDataTable tfoot th').each(function () {
+            $(this).html('<input type="text" />');
+        });
+        $('#ParticipantsDataTable tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                $('#ParticipantsDataTable tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+                var data = $('#ParticipantsDataTable').dataTable().fnGetData(this);
+                if (data != null) {
+                    console.log("#selParticipant" + data.Id);
+                    $('#selParticipant').val(data.Id);
+                }
+            }
+        });
+        //CRUD Participants END
+        $(document).ready(function () {
+            $(".form_datetime").datetimepicker({
+                language: "el",
+                autoclose: true,
+                isRTL: false,
+                format: "dd/mm/yyyy hh:ii",
+                pickerPosition: "bottom-left"
+            });
+
+   });
+    </script>
+}

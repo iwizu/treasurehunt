@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="TabPageCtr" xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:Ultratimer;assembly=Ultratimer" x:Class="Ultratimer.Page1">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <Image Source="treasurehunt.png" HorizontalOptions="Start" ></Image>
+        <Label Text="Live the Adventure...find tags-clues which lead to the treasure!" Font="Bold" HorizontalOptions="Start"  />
+        <Label Text="#####SELECT GAME#####" HorizontalOptions="Start"  />
+        <Picker x:Name="SelectGame" SelectedIndexChanged="OnGameChanged" HorizontalOptions="FillAndExpand">
+        </Picker>
+         <Label Text="Choose name:" HorizontalOptions="Start"  />
+        <Entry x:Name="Name" ></Entry>
+        <Image Source="treasClues.jpg" HorizontalOptions="FillAndExpand" ></Image>
+        <Picker x:Name="SelectClue" SelectedIndexChanged="OnClueChanged" HorizontalOptions="FillAndExpand">
+        </Picker>     
+        <Label x:Name="CTitle" Text="" HorizontalOptions="FillAndExpand"  />
+        <Image x:Name="CPicture" HorizontalOptions="FillAndExpand" ></Image>
+        <Label x:Name="CDetails" Text="" HorizontalOptions="FillAndExpand"  />
+
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

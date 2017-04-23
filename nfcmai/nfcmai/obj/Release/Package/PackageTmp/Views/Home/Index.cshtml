@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - NFC Treasure Hunt</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+  <style>
+      body{
+          width:100%;
+          height:100%;
+          background-image:url(../../Img/DSCF4016.jpg)
+      }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center" class="col-lg-6 col-lg-offset-3">
+            <img style="width:150px;" src="~/Img/treasurehunt.png" />
+            <h1>Do you seek an Adventure?</h1>
+            <h1>Why don't you <a href="Home/Create" class="btn btn-primary" style="display:inline">CREATE ONE?</a> </h1> 
+            <span><i>You will need an <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> Android smartphone (with NFC) and 
+                <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> NFC tags</i></span>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

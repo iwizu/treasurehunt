@@ -1,0 +1,2 @@
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Windows\Ultratimer.Windows.csproj;neutral
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\Ultratimer.csproj;neutral

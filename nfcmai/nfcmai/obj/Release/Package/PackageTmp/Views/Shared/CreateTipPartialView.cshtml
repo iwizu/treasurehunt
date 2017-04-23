@@ -1,0 +1,101 @@
+﻿@model nfcmai.Models.UTips
+
+<table>
+    <tr>
+        <td></td>
+        <td>Clue Title</td>
+        <td>
+            <input type="text" id="CTTitlos" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Details</td>
+        <td>
+            <textarea id="CTKeimeno" cols="40" rows="5" ></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Picture</td>
+        <td>
+            <img src="" id="ShowCTPicture"  style="width:200px;height:200px" /><br />
+            <input type="text" readonly="readonly" style="visibility:hidden" id="CTPicture" onchange="updShowImg('CTPicture')" />
+            <a href="~/filemanager/dialog.php?type=1&field_id=CTPicture" class="btn btn-success iframe-btn" type="button">Select Image</a>
+        </td>
+    </tr> 
+    <tr>
+        <td></td>
+        <td>Is Treasure(Final)</td>
+        <td>
+            <input type="checkbox" id="CTIsFinal" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Is the first clue</td>
+        <td>
+            <input type="checkbox" id="CTIsFirst" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>NFC Code</td>
+        <td>
+            <input type="text" id="CTHFCode" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="button" value="Καταχώρηση" id="submit-button" onclick="clickedCT()" class="btnStyleOne" />
+            <input id="CTSelTreasureId" type="hidden" name="hf" value="">
+            <input id="idCT" type="hidden" name="hf" value="">
+        </td>
+    </tr>
+</table>
+<script>
+    $('.iframe-btn').fancybox({
+        'width': 900,
+        'height': 750,
+        'type': 'iframe',
+        'autoScale': true
+    });
+    function updShowImg(t) {
+        var img = $("#" + t).val();
+        $("#Show" + t).attr("src", img);
+    }
+    function clickedCT()
+    {
+        //Set inserted vlaues
+        var TreasureHuntId = $("#CTSelTreasureId").val();
+        var Picture = $("#CTPicture").val();
+        var Titlos = $("#CTTitlos").val();
+        var Keimeno =$("#CTKeimeno").val();
+        var IsFinal = $("#CTIsFinal").is(":checked");
+        var IsFirst = $("#CTIsFirst").is(":checked");
+        var TakenBy = '';
+        var HFCode = $("#CTHFCode").val();
+        var m={
+            "TreasureHuntId": TreasureHuntId, "Picture": Picture, "Titlos": Titlos, "Keimeno": Keimeno,
+            "IsFinal": IsFinal, "TakenBy": TakenBy, "HFCode": HFCode, "IsFirst":IsFirst
+        };
+        console.log(m);
+               // Call Create action method
+        $.post('/Home/CreateTip', {
+            "TreasureHuntId": TreasureHuntId, "Picture": Picture, "Titlos": Titlos, "Keimeno": Keimeno,
+            "IsFinal": IsFinal, "TakenBy": TakenBy, "HFCode": HFCode, "IsFirst":IsFirst
+        },
+            function () {
+                $("#createTipForm").dialog("close");
+            });
+
+     
+    }
+   
+
+
+</script>
+
+
+

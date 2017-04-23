@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="KeptorDBEntities-Web.config Connection String" description="KeptorDBEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=XXXXXXXXX;initial catalog=XXXXXX;persist security info=True;user id=XXXXXXXX;password=XXXXXXX;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\iwizu\\Documents\\Visual\ Studio\ 2015\\Projects\\MSc\\nfcmai\\nfcmai\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='KeptorDBEntities']/@connectionString" />
+  </parameter>
+</parameters>

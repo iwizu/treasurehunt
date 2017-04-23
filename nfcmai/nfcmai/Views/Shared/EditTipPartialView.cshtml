@@ -1,0 +1,111 @@
+﻿@model nfcmai.Models.UTips
+
+<table>
+    <tr>
+        <td></td>
+        <td>Clue Title</td>
+        <td>
+            <input type="text" id="ETTitlos"   value="@Model.Titlos" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Details</td>
+        <td>
+            <textarea id="ETKeimeno" cols="40" rows="5" >@Model.Keimeno</textarea>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Picture</td>
+        <td>
+            <img src="@Model.Picture" style="width:200px;height:200px" id="ShowETPicture" /><br />
+            <input type="text" id="ETPicture" readonly="readonly" style="visibility:hidden" value="@Model.Picture" onchange="updShowImg('ETPicture')" /><br />
+            <a href="~/filemanager/dialog.php?type=1&field_id=ETPicture" class="btn  btn-success  iframe-btn" type="button">Select Picture</a>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Taken by</td>
+        <td>
+            <input type="text" id="ETTakenBy"  readonly="readonly"   value="@Model.TakenBy" />
+            <a href="javascript:ClearWinner()" class="btn btn-danger btn-xs">Clear</a>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Is Treasure(Final)</td>
+        <td>
+            <input type="checkbox" id="ETIsFinal"  checked="@Model.IsFinal" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Is the first clue</td>
+        <td>
+            <input type="checkbox" id="ETIsFirst" checked="@Model.IsFirst" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>NFC Code</td>
+        <td>
+            <input type="text" id="ETHFCode"  value="@Model.HFCode" />
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="button" value="Save" id="submit-button" onclick="clickedET()" class="btnStyleOne" />
+            <input id="ETSelTreasureId" type="hidden" name="hf" value="">
+            <input id="idET" type="hidden" name="hf" value="">
+        </td>
+    </tr>
+</table>
+<script>
+    function ClearWinner() {
+        $('#ETTakenBy').val('');
+    }
+                function updShowImg(t) {
+                    var img = $("#" + t).val();
+        $("#Show" + t).attr("src", img);
+                }
+                function clickedET()
+    {
+                    //Set inserted vlaues
+                    var TreasureHuntId = $("#ETSelTreasureId").val();
+                    var Picture = $("#ETPicture").val();
+                    var Titlos = $("#ETTitlos").val();
+                    var Keimeno = $("#ETKeimeno").val();
+                    var IsFinal = $("#ETIsFinal").is(":checked");
+                    var IsFirst = $("#ETIsFirst").is(":checked");
+                    var TakenBy = $("#ETTakenBy").val();
+                    var HFCode = $("#ETHFCode").val();
+                    var Id = $("#idET").val();
+                    console.log($("#ETIsFinal").is(":checked"));
+                    var m = {
+                        "TreasureHuntId": TreasureHuntId, "Picture": Picture, "Titlos": Titlos, "Keimeno": Keimeno,
+            "IsFinal": IsFinal, "TakenBy": TakenBy, "HFCode": HFCode, "IsFirst": IsFirst
+        };
+                console.log(m);
+               // Call Create action method
+        $.post('/Home/EditTip', { "Id":Id,
+            "TreasureHuntId": TreasureHuntId, "Picture": Picture, "Titlos": Titlos, "Keimeno": Keimeno,
+            "IsFinal": IsFinal, "TakenBy": TakenBy, "HFCode": HFCode, "IsFirst": IsFirst
+        },
+            function () {
+                $("#editTipForm").dialog("close");
+                });
+            }
+ 
+    $('.iframe-btn').fancybox({
+        'width': 900,
+        'height': 600,
+        'type': 'iframe',
+        'autoScale': false
+    });
+
+</script>
+
+
+

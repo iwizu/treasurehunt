@@ -1,0 +1,189 @@
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.dll.config
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Ultratimer.apk
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Ultratimer-Signed.apk
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\FormsViewGroup.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Plugin.Settings.Abstractions.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Plugin.Settings.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Abstract.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Droid.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLite-net.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLitePCL.batteries.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLitePCL.raw.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLitePCLPlugin_esqlite3.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Core.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\NdefLibrary.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Plugin.Settings.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Plugin.Settings.Abstractions.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Abstract.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Abstract.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Droid.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Droid.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLite-net.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLite-net.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Core.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\Ultratimer.Droid.dll
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\Ultratimer.Droid.pdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\bin\Ultratimer.Ultratimer.apk
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\raw\racesqlite.db3
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable\icon.png
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable-hdpi\icon.png
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\layout\tabbar.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\layout\toolbar.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\values\styles.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\xml\nfc.xml
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\R.cs.flag
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\uploadflags.txt
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\Ultratimer.Droid.csprojResolveAssemblyReference.cache
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Java.Interop.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Microsoft.CSharp.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Mono.Android.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Mono.CSharp.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Mono.Data.Tds.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\mscorlib.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Core.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Data.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.EnterpriseServices.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Net.Http.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Numerics.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Transactions.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Web.Services.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Xml.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Mono.CSharp.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Poz1.NFCForms.Abstract.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Poz1.NFCForms.Droid.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\SQLite-net.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Ultratimer.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Ultratimer.Droid.dll.mdb
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\Ultratimer.Droid.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.dll.config
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.pdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\FormsViewGroup.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Newtonsoft.Json.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Plugin.Settings.Abstractions.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Plugin.Settings.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLite-net.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLitePCL.batteries.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLitePCL.raw.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLitePCLPlugin_esqlite3.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\NdefLibrary.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Newtonsoft.Json.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Plugin.Settings.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Plugin.Settings.Abstractions.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Abstract.pdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Abstract.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Droid.pdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Poz1.NFCForms.Droid.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLite-net.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\SQLite-net.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\Ultratimer.Droid.csprojResolveAssemblyReference.cache
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\Ultratimer.Droid.dll
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\Ultratimer.Droid.pdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\raw\racesqlite.db3
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable\icon.png
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable-hdpi\icon.png
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\layout\tabbar.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\layout\toolbar.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\values\styles.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\xml\nfc.xml
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\R.cs.flag
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\uploadflags.txt
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Java.Interop.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Microsoft.CSharp.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Mono.Android.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Mono.CSharp.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Mono.Data.Tds.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\mscorlib.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Core.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Data.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.EnterpriseServices.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Numerics.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Transactions.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Web.Services.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Xml.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Mono.CSharp.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Poz1.NFCForms.Abstract.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Poz1.NFCForms.Droid.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\SQLite-net.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Ultratimer.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Ultratimer.Droid.dll.mdb
+C:\Users\iwizu\Documents\Visual Studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable\treasurehunt.png
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\res\drawable\treasclues.jpg
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Mai.TreasureHunt.apk
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Mai.TreasureHunt-Signed.apk
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer1.dll.mdb
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\bin\Mai.TreasureHunt.apk
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\android\assets\Ultratimer1.dll.mdb
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.dll
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.pdb
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\obj\Debug\Ultratimer.Droid.dll.mdb
+C:\Users\iwizu\Documents\visual studio 2015\Projects\MSc\Ultratimer\Ultratimer\Ultratimer.Droid\bin\Debug\Ultratimer.Droid.dll.mdb

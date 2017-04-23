@@ -1,0 +1,2 @@
+C:\Projects\Ultratimer\Ultratimer\Ultratimer.WinPhone\Ultratimer.WinPhone.csproj;neutral
+C:\Projects\Ultratimer\Ultratimer\Ultratimer\Ultratimer.csproj;neutral
